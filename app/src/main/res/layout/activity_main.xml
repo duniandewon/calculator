@@ -6,14 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumberSigned"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
-        android:ems="10"
         android:gravity="end"
-        android:inputType="numberSigned"
         android:textStyle="bold"
         android:padding="20dp"
         android:textColor="@color/white"
