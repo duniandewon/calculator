@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.calcultor"
+    namespace = "com.example.calculator"
     compileSdk = 34
 
     viewBinding {
