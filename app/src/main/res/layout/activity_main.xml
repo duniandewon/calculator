@@ -4,14 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#3A4663"
+    android:padding="20dp"
     tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@id/editTextNumberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/editTextNumberSigned"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:background="@color/black"
+        android:layout_height="wrap_content"
+        android:background="@drawable/display"
         android:gravity="bottom|end"
         android:lines="1"
         android:maxLines="1"
@@ -19,16 +32,22 @@
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textSize="40sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/keypadContainer"
+        app:layout_constraintEnd_toEndOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        app:layout_constraintTop_toBottomOf="@id/header"
         tools:text="998" />
 
     <LinearLayout
         android:id="@+id/keypadContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/keypad"
+        android:divider="@drawable/horizontal_divider"
         android:orientation="vertical"
+        android:padding="20dp"
+        android:showDividers="middle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/editTextNumberSigned"
         app:layout_constraintStart_toStartOf="@id/editTextNumberSigned"
@@ -51,12 +70,12 @@
             <Button
                 android:id="@+id/btn9"
                 style="@style/btnNumber"
-                android:text="9" />
+                android:text="9"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:id="@+id/btnDel"
-                style="@style/btnNumber"
-                android:textSize="16sp"
+                style="@style/btnText"
                 android:text="DEL" />
 
         </LinearLayout>
@@ -137,7 +156,7 @@
 
             <Button
                 android:id="@+id/btnReset"
-                style="@style/btnNumber"
+                style="@style/btnText"
                 android:layout_weight="2"
                 android:text="Reset" />
 
@@ -145,7 +164,9 @@
                 android:id="@+id/btnEqual"
                 style="@style/btnNumber"
                 android:layout_weight="2"
-                android:text="=" />
+                android:elevation="20dp"
+                android:text="="
+                android:translationZ="4dp" />
 
         </LinearLayout>
 
