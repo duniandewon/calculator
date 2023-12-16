@@ -14,6 +14,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:letterSpacing">-0.02</item>
+        <item name="fontFamily">@font/spartan_bold</item>
     </style>
 
     <style name="btnNumber" parent="button">
@@ -25,8 +26,7 @@
 
     <style name="btnText" parent="button">
         <item name="android:textSize">20sp</item>
-        <item name="android:letterSpacing">-0.02</item>
-        <item name="backgroundTint">#647198</item>
+        <item name="android:backgroundTint">#647198</item>
         <item name="android:background">@drawable/button_text</item>
     </style>
 </resources>
