@@ -5,46 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3A4663"
-    android:paddingVertical="30dp"
     android:paddingHorizontal="25dp"
-    tools:context=".MainActivity">
+    android:paddingVertical="30dp"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="35dp"
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/spartan_bold"
+        android:text="calc"
+        android:textColor="@color/white"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@id/editTextNumberSigned"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/editTextNumberSigned"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/display"
+        android:fontFamily="@font/spartan_bold"
         android:gravity="bottom|end"
         android:lines="1"
         android:maxLines="1"
-        android:fontFamily="@font/spartan_bold"
         android:paddingHorizontal="20dp"
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/keypadContainer"
-        app:layout_constraintEnd_toEndOf="@id/header"
-        app:layout_constraintStart_toStartOf="@id/header"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="32dp"
         tools:text="0" />
 
     <LinearLayout
         android:id="@+id/keypadContainer"
+        android:layout_marginTop="24dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/keypad"
         android:divider="@drawable/horizontal_divider"
         android:orientation="vertical"
@@ -60,8 +62,7 @@
             <Button
                 android:id="@+id/btn7"
                 style="@style/btnNumber"
-                android:text="7"
-                tools:ignore="HardcodedText" />
+                android:text="7" />
 
             <Button
                 android:id="@+id/btn8"
@@ -73,14 +74,12 @@
             <Button
                 android:id="@+id/btn9"
                 style="@style/btnNumber"
-                android:text="9"
-                tools:ignore="HardcodedText" />
+                android:text="9" />
 
             <Button
                 android:id="@+id/btnDel"
                 style="@style/btnText"
-                android:text="DEL"
-                tools:ignore="HardcodedText" />
+                android:text="DEL" />
 
         </LinearLayout>
 
