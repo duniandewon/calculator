@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background_900">#d1cccc</color>
+    <color name="background_800">#ededed</color>
+    <color name="background_700">#e6e6e6</color>
+
+    <color name="key_700">#1b5f65</color>
+    <color name="key_600">#377f86</color>
+    <color name="key_500">#893901</color>
+    <color name="key_400">#ca5502</color>
+    <color name="key_300">#a69d91</color>
+    <color name="key_200">#e5e4e1</color>
+
+    <color name="text_800">#35352c</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
